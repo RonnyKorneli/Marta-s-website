@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@font-face {
+  font-family: "lalala";
+  src: url(); /* this is how i link a font from my computer */
+}
+
+/* Color Theme Swatches in Hex */
+
+1-hex {
+  color: #80a7bf;
+}
+
+2-hex {
+  color: #0d5673;
+}
+
+3-hex {
+  color: #a64208;
+}
+
+4-hex {
+  color: #591902;
+}
+
+5-hex {
+  color: #f2d8ce;
+}
+
+/* Z-index: header 150, #navHeader 700, video 0, footer 0, sidebar 600, .formStyle 600, hover-h3 300, h1 600 */
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #6bb0bf;
+  /* background-size: cover; */
+  width: 100vw;
+  height: 50vh;
+  background-repeat: none;
+  background-attachment: fixed;
+  /*   background-position: bottom; */
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10%;
+  z-index: 700;
+  position: absolute;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  background-color: white;
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li,
+a,
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500px;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+}
+
+#navHeader {
+  position: absolute;
+  margin-top: -23px;
+  margin-left: -25%;
+  padding: 10px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 700;
+  color: black;
+}
+
+/* #navHeader:hover {
+  color: red;
+  filter: opacity(100%);
+  transition: all 0.7s ease 0s;
+} */
+
+.nav_links {
+  list-style: none;
+}
+
+li {
+  margin: 0px 20px;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 10px 30px;
+}
+
+.nav_links li a:hover {
+  display: inline-block;
+  border: black solid 1px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  transition: all o.3s ease 0s;
+  color: cadetblue;
+  text-decoration: underline;
+  /* I put text-decoration: underline in order to make people that are colorblind see it better */
+}
+
+button {
+  padding: 9px 25px;
+  background-color: black;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: rgb(245, 246, 248);
+  margin-top: 20px;
+  margin-left: 100px;
+  position: absolute;
+  margin-top: -1%;
+}
+
+button:hover {
+  background-color: rgb(245, 246, 248);
+  color: black;
+  border: black solid 1px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 0.6fr 5fr 0.6fr;
+  grid-template-areas:
+    "header header header"
+    "main main sidebar"
+    "footer footer footer";
+}
+
+.main {
+  grid-area: main;
+  background-color: black;
+  margin-right: 20px;
+}
+
+video {
+  z-index: 500;
+  margin-top: -150px;
+  margin-right: -20px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-right: 20px;
+}
+
+footer {
+  background-color: white;
+  grid-area: footer;
+  border-top: white solid 1px;
+  z-index: 400;
+}
+
+.footerContent {
+  margin-top: 30px;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+}
+
+#liFooter {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  border: black solid 1px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#liFooter:hover {
+  color: lightsalmon;
+  transition: all o.3s ease 0s;
+}
+
+#liFooterAdresse {
+  margin-top: -10px;
+}
+.sidebar {
+  background-color: black;
+  grid-area: sidebar;
+  margin-left: -30px;
+  padding: 20px;
+  z-index: 600;
+}
+
+span {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 50px;
+}
+
+.formStyle {
+  max-width: 100%;
+  display: inline-block;
+  border: white solid 2px;
+  padding: 20px;
+  border-radius: 10px;
+  position: fixed;
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-right: 150px;
+  z-index: 600;
+}
+
+textarea {
+  margin-top: 20px;
+  border: black solid 1px;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: white;
+  color: #591902;
+}
+
+textarea:hover {
+  background-color: #591902;
+  border-color: #f2d8ce;
+  color: #f2d8ce;
+}
+
+.placeholder {
+  color: #591902;
+  font-size: 12px;
+  padding-left: 7px;
+  padding-bottom: 7px;
+}
+
+.placeholder:hover {
+  background-color: #0d5673;
+  border-color: #f2d8ce;
+  color: #f2d8ce;
+  border: solid 2px;
+}
+
+label {
+  margin-top: 2px;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background-color: white;
+  border: white solid 1px;
+  padding: 0rem;
+  height: 30px;
+  padding: 5px;
+}
+
+input,
+label {
+  text-transform: uppercase;
+  color: white;
+  padding: 10px 0px 1px 0px;
+}
+
+#formHeadline {
+  text-transform: uppercase;
+  margin: 0px;
+  font-size: 40px;
+  font-family: "bebas neue";
+  color: whitesmoke;
+}
+
+select {
+  margin: 2px;
+  padding: 0.3rem;
+  background-color: whitesmoke;
+  color: #591902;
+}
+
+#submit {
+  background-color: white;
+  color: black;
+  width: auto;
+  border-radius: 9px;
+  margin-top: 8px;
+  padding: 10px;
+  font-size: 12px;
+  padding: 6px;
+}
+
+#submit:hover {
+  background-color: red;
+  border-color: white;
+  color: black;
+}
+
+h1,
+h3,
+p {
+  padding: 20px;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 100px;
+  font-family: "Bebas Neue", cursive;
+  color: white;
+  display: inline-block;
+  position: absolute;
+  margin-top: -280px;
+  margin-left: 20px;
+  z-index: 600;
+}
+
+#hover-h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: #80a7bf;
+  position: absolute;
+  margin-top: -200px;
+  margin-left: 19px;
+  margin-bottom: 30px;
+  display: inline-block;
+  z-index: 600;
+}
+
+#hover-h3:hover {
+  color: #591902;
+  cursor: pointer;
+}
+
+#hover-h1:hover {
+  color: #591902;
+}
